@@ -1,6 +1,6 @@
 import { BitlyClient } from 'bitly';
 import logger from '../helpers/logger';
-const bitly = new BitlyClient('f51f80f697de9e1e94e0e309ba9b7761c8f1c6cb', {});
+const bitly = new BitlyClient(process.env.access_token, {});
 
 exports.shorten = (req, res, next) => {
   const url = req.body.url;
