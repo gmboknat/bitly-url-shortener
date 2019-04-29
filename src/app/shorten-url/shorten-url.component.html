@@ -1,0 +1,28 @@
+<div fxLayout="column">
+  <div fxLayout.gt-xs="row" fxLayoutAlign="center" class="form">
+    <form (ngSubmit)="onShorten(f)" #f="ngForm">
+      <mat-form-field>
+        <textarea matInput placeholder="Enter URL" ngModel name="url" type="text"> </textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        class="convert-btn"
+        type="submit"
+        [disabled]="!f.valid"
+      >
+        Convert
+      </button>
+    </form>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center" class="result">
+    <mat-card *ngIf="resultData">
+      <mat-card-title>Result</mat-card-title>
+      <mat-card-content>
+        <p>Long URL: {{ resultData.long_url }}</p>
+        <p>New Shorten URL: {{ resultData.url }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

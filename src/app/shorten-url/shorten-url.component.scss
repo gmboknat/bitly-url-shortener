@@ -1,0 +1,26 @@
+.form {
+  margin-top: 20px;
+  mat-form-field {
+    width: 500px;
+
+    @media (max-width: 600px) {
+      width: unset;
+    }
+  }
+
+  .convert-btn {
+    margin-left: 20px;
+  }
+}
+
+.result {
+  mat-card {
+    mat-card-content {
+      margin-top: 20px;
+    }
+    width: 500px;
+    @media (max-width: 600px) {
+      width: 300px;
+    }
+  }
+}
